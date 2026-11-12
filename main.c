@@ -1,13 +1,19 @@
 #include <stdio.h>
 
-void swap (int *a, int *b) {
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-void main(void) {
-    int a = 3;
-    int b = 5;
-    swap(&a, &b);
-    printf("a:%i, b:%i\n", a, b);
+int main(void) {
+    char *pc;
+    int *pi;
+    double *pd;
+
+    pc =(char *)10000;
+    pi =(int *)10000;
+    pd =(double *)10000;
+
+    printf("before: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+
+    pc++;
+    pi++;
+    pd++;
+    printf("after: pc = %d, pi = %d, pd = %d\n", pc, pi, pd);
+    return 0;
 }
